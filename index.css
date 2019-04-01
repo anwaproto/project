@@ -1,0 +1,175 @@
+/*body{*/
+    /*background-image:url(../img/Christmas_item_bg.jpg);*/
+/*}*/
+.footersize{
+    background:#ebebeb;
+    border-top:1px solid #e5e5e5;
+    padding:40px 0 20px;
+    text-align:center;
+    width:100%;
+    height:300px;
+}
+.footerkf{
+
+    width:100px;
+    height:18px;
+    display: inline-block;
+}
+.footerkfimg{
+    background:url(../img/icons.png-4.png) no-repeat -120px 5px;
+    width:40px;
+    height:40px;
+    margin:auto;
+}
+.footersm{
+    font-size:12px;
+}
+.footerwximg{
+    background:url(../img/icons.png-4.png) no-repeat -160px 5px;
+    width:40px;
+    height:40px;
+    margin:auto;
+}
+.footerdhimg{
+    background:url(../img/icons.png-4.png) no-repeat -210px -10px;
+    width:20px;
+    height:20px;
+    display: inline-block;
+    margin:0 auto 0;
+    margin-bottom: 5px;
+}
+.mcenter{
+    margin:auto;
+    max-height: 30px;
+}
+.mcenter span{
+    display: inline-block;
+    line-height:30px;
+}
+.footershgs{
+    background:url(../img/icons_1.png-01.png) no-repeat -15px -65px;
+    width:20px;
+    height:20px;
+    display: inline-block;
+}
+ul[class="breadcrumb m-0 footersm justify-content-center"] li a,ul[class="breadcrumb m-0 footersm justify-content-center"] li a:hover{
+    color:#000;
+    outline:0;
+    text-decoration:none;
+}
+ul[class="breadcrumb m-0 small"]{
+    text-align:center;
+}
+.weach{
+    background:url(../img/icons.png-4.png) no-repeat -325px -245px;
+    width:30px;
+    height:30px;
+}
+.header1-size{
+    width:100%;
+    line-height:30px;
+    background-color: #f9f9f9;
+    font-size:13px;
+}
+div ul[class="nav"] li a{
+    color:#000;
+}
+div ul[class="nav"] li a:hover{
+    color:red;
+}
+.header-logo{
+    width:100%;
+    min-width:1200px;
+    max-height:150px;
+    border:1px solid #fff;
+}
+.header-logo1{
+    margin-left:38%;
+}
+.header-nav{
+    margin:0 auto 0;
+}
+.body-card{
+    width:206px;
+    height:252px;
+    margin-bottom:10px;
+    margin-left:6px;
+    margin-right:6px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.body-card:hover{
+    background-image:url(../img/Christmas_item_bg.jpg);
+}
+.body-card img{
+    width:197px;
+    height:197px;
+    margin-right:4px;
+    margin-left:4px;
+    transition:all 1s;
+    margin-bottom:10px;
+}
+.body-card img:hover{
+    transform:scale(1.1);
+}
+.body-card a{
+    text-decoration:none;
+    font-size:15px;
+}
+.body-card p{
+    margin:0;
+}
+input{
+    outline:medium;
+    border:none;
+    border-bottom:1px solid #ccc;
+    min-width:300px;
+    width:100%;
+    height:50px;
+}
+.login_a{
+    color:#666;
+    text-decoration:none;
+    font-size:13px;
+    text-align:right;
+}
+.login_a:hover{
+    text-decoration:none;
+    color:#444;
+}
+.prev_left,.next_right{
+    width:35px;
+    height:70px;
+    background-color:rgba(0,0,0,0.3);
+    border-radius:8px;
+    position:absolute;
+    top:165px;
+}
+.prev_left{
+    left:5px;
+}
+.next_right{
+    right:5px;
+}
+.bannerbt{
+    width:550px;
+}
+#nav ul li:hover .bannertopnav{
+    z-index:2;
+    background:#fff;
+}
+.bannertopnav{
+    position: absolute;
+    padding-top:15px;
+    margin-top:-10px;
+    margin-left:-22px;
+    width:150px;
+    list-style:none;
+}
+.bannertopnav li a{
+    text-decoration:none;
+    color:#222;
+    text-align: left;
+}
+
+

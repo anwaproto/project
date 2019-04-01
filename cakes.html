@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/cakes.css"/>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<header>
+    <div class=" header1-size">
+        <div class="float-right">
+            <ul class="nav">
+                <li><a href="login.html">登录</a></li>&nbsp;/&nbsp;
+                <li><a href="register.html">注册</a></li>
+                <li class="weach ml-4"><a href="#"></a></li>
+                <li class="mr-4"><a href="#">微信公众号</a></li>
+            </ul>         
+        </div>
+        <div class="clearfix a"></div>
+    </div>
+    <div class="header-logo border-bottom">
+        <div class="header-logo1">
+            <div>
+                <img class="mr-2" src="../img/plum_blossom.png" alt=""/>
+                <img src="../img/logo_new.png" alt="" class="mr-5"/>
+            </div>
+        </div>
+        <div class="w-50 header-nav" id="nav">
+            <ul class="navbar nav">
+                <li class="nav-item"><a class="nav-link text-dark" href="index.html">首页</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#cake">蛋糕</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">礼品</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">企业专区↓</a>
+                    <ul class="bannertopnav">
+                        <li>
+                            <a href="#">企业采购</a>
+                        </li>
+                        <li>
+                            <a href="#">大客户区</a>
+                        </li>
+                        <li>
+                            <a href="#">福利券区</a>
+                        </li>
+                        <li>
+                            <a href="#">合作专区</a>
+                        </li>
+                        <li>
+                            <a href="#">国行专区</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">我的诺心↓</a>
+                    <ul class="bannertopnav">
+                        <li>
+                            <a href="#">LECLUB</a>
+                        </li>
+                        <li>
+                            <a href="#">我的订单</a>
+                        </li>
+                        <li>
+                            <a href="#">找回密码</a>
+                        </li>
+                        <li>
+                            <a href="#">礼卡专区</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="container position-relative m-auto p-0">
+    <div class="bg-white pt-5">
+        <div class="cake_1_div float-left">
+            <img src="../img/1 (2).jpg" alt=""/>
+            <p class="cake_1_p">Il y a plus de 200 ans, le festival de la rose de Malmesson,C'était une chanson d'amour de Napoléon dédiée à Joséphine.À ce stade de temps, Rose était devenu synonyme d'amour.Sélectionnez le chocolat noir et le beurre importés,Découpé le plus beau regard d'amour aux yeux des amoureux
+            </p>
+            <p class="cake_1_p">
+                200多年前，马尔梅松的玫瑰盛会，是拿破仑献给约瑟芬的爱情赞歌。时光至此，玫瑰渐成爱情的同义语。甄选进口黑巧克力与黄油，雕琢出恋人眼中爱情美好的模样。新鲜采摘的花瓣铺满四周，诠释法兰西的中世纪浪漫。当所有的花朵在冬季睡去，唯有你的爱能唤醒玫瑰蓓蕾。
+            </p>
+        </div>
+        <div class="float-right cake_2_div">
+            <p class="cake_2_p pt-3">L'amour ·Joséphine &nbsp;臻爱·约瑟芬</p>
+            <p class="cake_3_p pt-2">￥398.00</p>
+            <p class="cake_4_p pt-2">1.7磅</p>
+            <p class="cake_4_p pt-3">提前5小时预定</p>
+            <p class="cake_4_p pt-4">数量
+                <button class="cake_btn1 cake_btn3" disabled>-</button>
+                <span>1</span>
+                <button class="cake_btn1">+</button>
+            </p>
+            <script>
+                $(".cake_btn1:first-child").click(
+                    function(){
+                        if($(this).next().html()>1){
+                        $(this).next().html($(this).next().html()-1)
+                        }else{
+                            $(this).addClass("cake_btn3")
+                            $(this).attr("disabled")
+                        }
+                    }
+                )
+                $(".cake_btn1:last-child").click(
+                    function(){
+                        $(this).prev().html(parseInt($(this).prev().html())+1);
+                        $(this).prev().prev().removeClass("cake_btn3")
+                        $(this).prev().prev().removeAttr("disabled")
+                    }
+                )
+            </script>
+            <div class="pt-4">
+                <button class="cake_btn2">加入购物车</button>
+                <button class="cake_btn2">立即购买</button>
+            </div>
+            <p class="cake_5_p pt-4">
+                *温馨提示：
+                <span class="cake_ps">金箔不可食用</span>
+            </p>
+            <div class="cake_2_p"></div>
+            <div class="clearfix">
+                <ul class="cake_ul">
+                    <li>
+                        <span>Texture口感</span>
+                    </li>
+                    <li>
+                        <span>Base口味基底</span>
+                    </li>
+                    <li>
+                        <span>Sweetness甜味</span>
+                    </li>
+                    <li>
+                        <span>Flavor口味</span>
+                    </li>
+                </ul>
+                <ul class="cake_ul">
+                    <li>
+                        <span>入口即化</span>
+                    </li>
+                    <li>
+                        <span>Mousse</span>
+                    </li>
+                    <li>
+                        <span>提拉米苏</span>
+                    </li>
+                    <li>
+                        <span>巧克力/慕斯</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <img src="../img/pc.jpg" class="" alt=""/>
+    <div class="mb-2" id="cakefoot">
+        <div class="d-inline-block pb-2">
+            <a href="#">
+                <img src="../img/cakefoot1.jpg" alt=""/>
+            </a>
+        </div>
+        <div class="d-inline-block pb-2">
+            <a href="#">
+                <img src="../img/cakefoot2.jpg" alt=""/>
+            </a>
+        </div>
+        <div class="d-inline-block pb-2">
+            <a href="#">
+                <img src="../img/cakefoot3.jpg" alt=""/>
+            </a>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class=" footersize">
+        <div>
+            <a href="#" class=" footerkf text-dark footersm">
+                <div class="footerkfimg"></div>
+                在线客服
+            </a>
+            <a href="#" class=" footerkf text-dark footersm">
+                <div class="footerwximg"></div>
+                微信公众号
+            </a>
+        </div>
+        <table></table>
+        <div class="mcenter mt-3">
+            <p class="footerdhimg align-bottom"></p>
+            <span class="footersm">
+                客服电话：4001-578-578 服务时间（08:30-22:30）
+            </span>
+        </div>
+        <div class="mt-3">
+            <ul class="breadcrumb m-0 footersm justify-content-center">
+                <li class="breadcrumb-item">
+                    <a href="#">诺心公告</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#">关于诺心</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#">联系我们</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#">客服服务</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#">食品经营许可证</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#">生产许可证</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#">预付卡协议</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#">预付卡协议</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#" class="footershgs align-bottom"></a>
+                    <a href="#">上海工商</a>
+                </li>
+            </ul>
+        </div>
+        <p class="small  mt-3">诺心食品（上海）有限公司   上海徐汇区田林路140号28号楼503室  客服邮箱：services@lecake.com  公司电话：4001-578-578</p>
+        <p class="small mb-0 mt-3">copyright©2010-2019 诺心lecake.com版权所有 沪ICP备10211730号</p>
+    </div>
+</footer>
+</body>
+</html>

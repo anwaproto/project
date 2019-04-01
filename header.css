@@ -1,0 +1,64 @@
+.weach{
+    background:url(../img/icons.png-4.png) no-repeat -325px -245px;
+    width:30px;
+    height:30px;
+}
+.header1-size{
+    width:100%;
+    line-height:30px;
+    background-color: #f9f9f9;
+    font-size:13px;
+}
+div ul[class="nav"] li a{
+    color:#000;
+}
+div ul[class="nav"] li a:hover{
+    color:red;
+}
+.header-logo{
+    width:100%;
+    min-width:1200px;
+    max-height:150px;
+    border:1px solid #fff;
+}
+.header-logo1{
+    margin-left:38%;
+}
+.header-nav{
+    margin:0 auto 0;
+}
+input{
+    outline:medium;
+    border:none;
+    border-bottom:1px solid #ccc;
+    min-width:300px;
+    width:100%;
+    height:50px;
+}
+.login_a{
+    color:#666;
+    text-decoration:none;
+    font-size:13px;
+    text-align:right;
+}
+.login_a:hover{
+    text-decoration:none;
+    color:#444;
+}
+#nav ul li:hover .bannertopnav{
+    z-index:2;
+    background:#fff;
+}
+.bannertopnav{
+    position: absolute;
+    padding-top:15px;
+    margin-top:-10px;
+    margin-left:-22px;
+    width:150px;
+    list-style:none;
+}
+.bannertopnav li a{
+    text-decoration:none;
+    color:#222;
+    text-align: left;
+}

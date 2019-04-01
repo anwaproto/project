@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/index.css"/>
+</head>
+<body>
+<header>
+    <div class=" header1-size">
+        <div class="float-right">
+            <ul class="nav">
+                <li><a href="login.html">登录</a></li>&nbsp;/&nbsp;
+                <li><a href="register.html">注册</a></li>
+                <li class="weach ml-4"><a href="#"></a></li>
+                <li class="mr-4"><a href="#">微信公众号</a></li>
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="header-logo border-bottom">
+        <div class="header-logo1">
+            <div>
+                <img class="mr-2" src="../img/plum_blossom.png" alt=""/>
+                <img src="../img/logo_new.png" alt="" class="mr-5"/>
+            </div>
+        </div>
+        <div class="w-50 header-nav" id="nav">
+            <ul class="navbar nav">
+                <li class="nav-item"><a class="nav-link text-dark" href="#">首页</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#cake">蛋糕</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">礼品</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">企业专区↓</a>
+                    <ul class="bannertopnav">
+                        <li>
+                            <a href="#">企业采购</a>
+                        </li>
+                        <li>
+                            <a href="#">大客户区</a>
+                        </li>
+                        <li>
+                            <a href="#">福利券区</a>
+                        </li>
+                        <li>
+                            <a href="#">合作专区</a>
+                        </li>
+                        <li>
+                            <a href="#">国行专区</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">我的诺心↓</a>
+                    <ul class="bannertopnav">
+                        <li>
+                            <a href="#">LECLUB</a>
+                        </li>
+                        <li>
+                            <a href="#">我的订单</a>
+                        </li>
+                        <li>
+                            <a href="#">找回密码</a>
+                        </li>
+                        <li>
+                            <a href="#">礼卡专区</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="carousel slide border-bottom" data-ride="carousel" id="index">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="w-100" src="../img/CAAD4A8C4CADE543B3B7022A04C09F2A.jpg" alt=""/>
+        </div>
+        <div class="carousel-item">
+            <img class="w-100" src="../img/361897734A51912DABFE3F1663CF9567.jpg" alt=""/>
+        </div>
+        <div class="carousel-item">
+            <img class="w-100" src="../img/CAAD4A8C4CADE543B3B7022A04C09F2A.jpg" alt=""/>
+        </div>
+        <div class="carousel-item">
+            <img class="w-100" src="../img/361897734A51912DABFE3F1663CF9567.jpg" alt=""/>
+        </div>
+    </div>
+    <ul class="carousel-indicators">
+        <li data-slide-to="0" data-target="#index" class="active"></li>
+        <li data-slide-to="1" data-target="#index"></li>
+        <li data-slide-to="2" data-target="#index"></li>
+        <li data-slide-to="3" data-target="#index"></li>
+    </ul>
+    <a href="#index" class="carousel-control-prev prev_left" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a href="#index" class="carousel-control-next next_right" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+<div class="container pt-5 mb-5" id="shop">
+    <a href="#"><img src="../img/2E06855F0ED213B98A6CF8F64192B62D.jpg" class="bannerbt" alt=""/></a>
+    <a href="#"><img src="../img/F11D616C37C73D6E2CE47A4CA1006B32.jpg" class="bannerbt" alt=""/></a>
+    <script>
+        var i=20;
+        var div=`<div class="d-inline-block body-card mt-5"><a href="cakes.html">
+                <img src="../img/1.jpg" alt="" class="d-block rounded"/>
+                <p class="text-center text-dark font-weight-bold">挚爱·约瑟芬</p>
+                <p class="text-center text-dark font-weight-bold">L'amour ·Joséphine</p></a>
+                </div>`
+        var shop=$("#shop")
+        for(var a=0;a<i;a++){
+            shop.append(div)
+        }
+    </script>
+</div>
+<footer>
+    <div class=" footersize">
+        <div class="">
+            <a href="#" class=" footerkf text-dark footersm">
+                <div class="footerkfimg"></div>
+                在线客服
+            </a>
+            <a href="#" class=" footerkf text-dark footersm">
+                <div class="footerwximg"></div>
+                微信公众号
+            </a>
+        </div>
+        <table></table>
+        <div class="mcenter mt-3">
+            <p class="footerdhimg align-bottom"></p>
+            <span class="footersm">
+                客服电话：4001-578-578 服务时间（08:30-22:30）
+            </span>
+        </div>
+        <div class="mt-3">
+            <ul class="breadcrumb m-0 footersm justify-content-center">
+                <li class="breadcrumb-item">
+                    <a href="#">诺心公告</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#">关于诺心</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#">联系我们</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#">客服服务</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#">食品经营许可证</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#">生产许可证</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#">预付卡协议</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#">预付卡协议</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#" class="footershgs align-bottom"></a>
+                    <a href="#">上海工商</a>
+                </li>
+            </ul>
+        </div>
+        <p class="small  mt-3">诺心食品（上海）有限公司   上海徐汇区田林路140号28号楼503室  客服邮箱：services@lecake.com  公司电话：4001-578-578</p>
+        <p class="small mb-0 mt-3">copyright©2010-2019 诺心lecake.com版权所有 沪ICP备10211730号</p>
+    </div>
+</footer>
+</body>
+</html>

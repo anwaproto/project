@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import'mint-ui/lib/style.css'
-import {Header,Button,Swipe,SwipeItem,Search} from "mint-ui"
+import {Header,Button,Swipe,SwipeItem,Search,Toast} from "mint-ui"
 import axios from 'axios'
 axios.defaults.withCredentials = true
 Vue.prototype.axios = axios;

@@ -1,10 +1,7 @@
 <template>
  <div class="app-container">
-    <mt-header title="诺心蛋糕" fixed style="background:red;"></mt-header>
-    <div style="background:#fff;padding:15px;">
-      <img src="http://127.0.0.1:3000/img/logo_new.png" style="margin-left:20%;">
-    </div>
-    <router-view></router-view> 
+    <mt-header title="新绛中学" fixed></mt-header>
+    <router-view></router-view>
  </div>
 </template>
 

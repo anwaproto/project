@@ -1,108 +1,60 @@
 <template>
-    <div>
-        <mt-swipe :auto="4000" style="height:150px;">
-            <mt-swipe-item v-for="(a,i) of list" :key="i">
-                <img :src="a.img_url" style="width:100%;height:150px;">
-            </mt-swipe-item>
+    <div class="app-home">
+        <img src="http://127.0.0.1:3000/img/xjzx/logo.png" style="width:100%;">
+        <!-- 轮播图  mint-ui -->
+        <mt-swipe :aoto="3000">
+            <mt-swipe-item v-for="(a,x) of s_img" :key="x">
+                <img :src="a">
+            </mt-swipe-item>      
         </mt-swipe>
-        <div class="mui-content" style="">
-		        <ul class="mui-table-view mui-grid-view mui-grid-9" style="margin:0;background:pink;">
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3" v-for="(a,i) of grid" :key="i">
-                        <span @click="cakelist(a.id)">
-		                    <div class="mui-media-body" style="color:#eff;">
-                                {{a.name}}
-                            </div>
-                        </span>
-                    </li>
-		        </ul> 
-		</div>
-
-
-        <div class="mui-card" style="width:50%;margin:0;display:inline-block;" v-for="(a,i) of cakeimg" :key="i">
-				<div class="mui-card-header" style="font-size:18px;color:#aa6666;">
-                    {{a.name}}
-                </div>
-				<div class="mui-card-content">
-                    <router-link :to="'/cakeinfo?cid='+a.cid">
-                        <div class="mui-card-content-inner">
-                            <img :src="a.md" style="width:100%;">
-                        </div>
-                    </router-link>
+        <ul class="mui-table-view mui-grid-view mui-grid-9" style="background:#fff;">
+		    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3" v-for="(a,i) of list" :key="i">
+                <router-link :to="a.rout">
+                <!-- <span class="mui-icon mui-icon-home"></span> -->
+                <div class="mui-media-body" style="padding-top:1px;height:17px;">{{a.content}}</div></router-link>
+            </li>
+        </ul>
+        <div class="mui-card" style="margin:10px 0" v-for="(a,i) of list" :key="i">
+			<div class="mui-card-header">{{a.content}}</div>
+			<div class="mui-card-content">
+				<div class="mui-card-content-inner">
+					<img :src="a.img_url" style="width:100%;">
 				</div>
-				<div class="mui-card-footer" style="font-size:16px;color:#0aa1ed">
-                    ￥{{a.price}}
-                </div>
-		</div>
-
-        <nav class="mui-bar mui-bar-tab">
-            <router-link class="mui-tab-item mui-active" to="/">
-                <span class="mui-icon mui-icon-home"></span>
-                <span class="mui-tab-label">首页</span>
-            </router-link>
-            <a class="mui-tab-item" @click="user">
-                <span class="mui-icon mui-icon-contact"></span>
-                <span class="mui-tab-label">会员</span>
-            </a>
-            <router-link class="mui-tab-item" href="#tabbar-with-chat" to="/ShopCart">
-                <span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge">{{shopx}}</span></span>
-                <span class="mui-tab-label">购物车</span>
-            </router-link>
-        </nav> 
-        
+			</div>
+			<div class="mui-card-footer">
+                <span>
+                    {{a.title}}
+                </span>
+                <router-link :to="a.rout">
+                    查看详情&gt;&gt;    
+                </router-link> 
+            </div>
+		</div>      
     </div>
 </template>
-
 
 
 <script>
 export default {
     data(){
         return{
-            list:[],
-            grid:[],
-            cakeimg:[],
-            uname:sessionStorage.getItem("uname"),
-            shopx:sessionStorage.getItem("shopx"),
-            uid:sessionStorage.getItem("uid")
+            s_img:{},
+            list:[]
         }
     },
     created(){
-        this.swplist();
-        this.gridlist();
-        this.cakelist();
-        this.getshopcart();
+        this.getswipe();
+        this.grid();
     },
     methods:{
-        getshopcart(){
-            var url = "http://127.0.0.1:3000/shopCart?uid="+this.uid
-                    this.axios.get(url).then(result=>{
-                        sessionStorage.setItem("shopx",result.data.data.length)
-                })
-        },
-        user(){
-            if(this.uname){
-                location = 'http://127.0.0.1:8080/#/Loginout'
-            }else{
-                location = 'http://127.0.0.1:8080/#/Login'
-            }
-        },
-        cakelist(i){
-            if(!i){i=1}
-            var url = "http://127.0.0.1:3000/zslist?fid="+i
-            this.axios.get(url).then(result=>{
-                this.cakeimg = result.data.data
+        getswipe(){
+            this.axios.get("http://127.0.0.1:3000/swipelist").then(result=>{
+            this.s_img=result.data.data
             })
         },
-        swplist(){
-            var url = "http://127.0.0.1:3000/swp"
-            this.axios.get(url).then(result=>{
-                this.list = result.data.data
-            })
-        },
-        gridlist(){
-            var url = "http://127.0.0.1:3000/gridlist"
-            this.axios.get(url).then(result=>{
-                this.grid = result.data.data
+        grid(){
+            this.axios.get("http://127.0.0.1:3000/index").then(result=>{
+                this.list=result.data.data
             })
         }
     }
@@ -112,5 +64,15 @@ export default {
 
 
 <style>
-
+.app-home .mint-swipe{
+    height:200px;
+}
+.app-home .mint-swipe img{
+    width:100%;
+    height:200px;
+}
+.app-home ul li a img{
+    width:60px;
+    height:60px;
+}
 </style>
